@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffebee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d32f2f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 2; /* Ensure the card is above the paper */
+}
+
+.card h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.card p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.paper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1; /* Ensure the paper is behind the card */
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+
+.paper-front,
+.paper-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.paper-back {
+    transform: rotateY(180deg);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* Flipped state for the paper */
+.paper.flipped .paper-front {
+    transform: rotateY(180deg);
+}
+
+.paper.flipped .paper-back {
+    transform: rotateY(0);
+}
