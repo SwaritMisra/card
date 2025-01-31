@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" onclick="openCard()">
+            <div class="card-front">
+                <style>
+                    h1 {text-align: center;}
+                    h4 {text-align: center;}
+                </style>
+                <h1><em>For </em><em><span id="card-name">Harshu</span></em></h1>
+                <br>
+                <h4>(Click to open)</h4>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-front">
+                <p>Dear harshu,<br>
+                <br>
+                This is probably not what you were expecting (the other thing didn't pan out) but I will make this as romantic as possible. So, it's the month of February now and this is what you've been waiting for.
+                But first, I just want to take a moment to appreciate you. You've been the most amazing girlfriend ever, loved, appreciated, cared for and made me feel like
+                no one else and I'm literally the luckiest guy in the whole wide world. You've made me feel things I never thought I would ever feel.
+                Thank you for being mine, thank you for putting in the effort for me, I will forever love you for that.</p>
+                <button onclick="flipPaper()">Flip Paper</button>
+            </div>
+            <div class="paper-back">
+                <p>So, my absolutely stunning, loving, adorable and smart girl;<br>
+                <br>
+                <em><b><h3>Will you be my valentine, for this year and every single one that follows?</h3></b></em></p>
+                <button id="yes-button">YES</button>
+                <button onclick="flipPaper()">Flip Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
